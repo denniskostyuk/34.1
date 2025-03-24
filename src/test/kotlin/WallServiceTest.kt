@@ -21,4 +21,22 @@ class WallServiceTest {
 
         assertEquals(1, result)
     }
+
+    @Test
+    fun updateTrue() {
+
+        val service = WallService
+        val result = service.update(Post(1,3,3,"This is new text", true, 1742682999, Likes(999, false,true)))
+        assertEquals(true, result)
+    }
+
+    @Test
+    fun updateFalse() {
+
+        val service = WallService
+        val result = service.update(Post(10,3,3,"This is new text", true, 1742682999, Likes(999, false,true)))
+        assertEquals(false, result)
+    }
+
+
 }
