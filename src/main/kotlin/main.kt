@@ -80,4 +80,8 @@ object WallService {
         }
         return result
     }
+
+    fun clear() {
+        posts = emptyArray()
+    }
 }
